@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{2aaf5d16-17bd-42fa-a433-334a5967a483}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\sys">
+      <UniqueIdentifier>{260f26e6-0d81-44f8-b74e-90f5df781e2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\file">
+      <UniqueIdentifier>{d1a3e4b5-c2f6-87a9-40d8-e3c7b2f1a0d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\process">
+      <UniqueIdentifier>{e2b4f5c6-d3g7-98b0-51e9-f4d8c3e2b1a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\system">
+      <UniqueIdentifier>{f3c5g6d7-e4h8-09c1-62f0-g5e9d4c3b2a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{7de2bc2d-b079-464e-b7d1-ee9a9243177a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\sys\type.h">
+      <Filter>include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sys\stat.h">
+      <Filter>include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="include\error.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sys\time.h">
+      <Filter>include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sys\utsname.h">
+      <Filter>include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="include\sys\wait.h">
+      <Filter>include\sys</Filter>
+    </ClInclude>
+    <ClInclude Include="include\type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file\file_error.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file\file_status.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\process\pricess_error.h">
+      <Filter>include\process</Filter>
+    </ClInclude>
+    <ClInclude Include="include\process\process_status.h">
+      <Filter>include\process</Filter>
+    </ClInclude>
+    <ClInclude Include="include\process\process_time.h">
+      <Filter>include\process</Filter>
+    </ClInclude>
+    <ClInclude Include="include\process\process_wait.h">
+      <Filter>include\process</Filter>
+    </ClInclude>
+    <ClInclude Include="include\system\system_error.h">
+      <Filter>include\system</Filter>
+    </ClInclude>
+    <ClInclude Include="include\system\system_name.h">
+      <Filter>include\system</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="linux.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
