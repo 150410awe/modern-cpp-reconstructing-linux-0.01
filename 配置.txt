@@ -1,27 +1,27 @@
-## 1. 解决方案信息
+## 解决方案信息
 属性                        值
 解决方案文件             linux.sln
 Visual Studio 版本      17.14.36811.4
 最低VS版本              10.0.40219.1
 项目类型                Win32 控制台应用
 
-## 2. 项目配置
-### 2.1 构建配置
+## 项目配置
+### 构建配置
 配置    平台    平台工具集  字符集
 Debug   Win32   v143       Unicode
 Release Win32   v143       Unicode
 Debug   x64     v143       Unicode
 Release x64     v143       Unicode
 
-### 2.2 项目设置
+### 项目设置
 属性                        值 
 项目GUID                {b3391895-34d7-4d76-8dbf-5ede45c321f3}
 根命名空间              linux
 Windows 目标平台版本    10.0
 配置类型                应用程序
 
-## 4. 编译配置
-### 4.1 Debug 配置（Win32）
+## 编译配置
+### Debug 配置（Win32）
 选项                   值 
 警告级别               Level3
 SDL检查                true
@@ -30,7 +30,7 @@ SDL检查                true
 子系统                  控制台
 生成调试信息            true
 
-### 4.2 Release 配置（Win32）
+### Release 配置（Win32）
 选项               值
 警告级别            Level3
 函数级链接          true
