@@ -1,8 +1,7 @@
 #pragma once
 
 #include "type.h"
-#include "file/file_type.h"
-
+#include "file/file_kernel_type.h"
 
 struct executable_header {
     executable_file_type file_type;    /* 标识文件类型 */

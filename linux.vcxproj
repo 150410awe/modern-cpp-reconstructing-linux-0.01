@@ -41,6 +41,9 @@
   <ItemGroup>
     <ClCompile Include="linux.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="include\temp.txt" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
