@@ -32,8 +32,13 @@
 [include/file/file_error.h](include/file/file_error.h)
 [include/process/process_error.h](include/process/process_error.h)
 [include/system/system_error.h](include/system/system_error.h)
+[include/error.h](include/error.h)
 --分类清晰的错误码
-- **可执行文件**：[include/executable_header.h](include/executable_header.h) - ELF文件头部管理
+- **可执行文件**：[include/executable_header.h](include/executable_header.h) - 文件头部管理
+- **符号和重定位**：[include/relocation_information.h](include/relocation_information.h) - 重定位信息管理
+[include/symbol_table.h](include/symbol_table.h) - 符号表管理
+- **文件类型**：[include/file/file_kernel_type.h](include/file/file_kernel_type.h) - 内核文件类型管理
+[include/file/file_user_type.h](include/file/file_user_type.h) - 用户文件类型管理
 
 ## 未来计划
 
