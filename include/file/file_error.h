@@ -7,7 +7,7 @@
  * files_and_directories_error - 文件和目录错误码（Files and Directories Error Codes）
  * 这些错误码表示在操作文件或目录时可能出现的错误情况。
 */
-enum class files_and_directories_error : int32_t {
+enum class files_and_directories_error : uint8_t {
     null_error = 0, // 无错误（No error）
     enoent, // 没有该文件或目录（No such file or directory）
     enotdi, // 不是目录（Not a directory）

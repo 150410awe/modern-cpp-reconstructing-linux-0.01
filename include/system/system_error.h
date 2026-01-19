@@ -6,7 +6,7 @@
  * permission_error - 权限错误码（Permission Error Codes）
  * 这些错误码表示在执行系统调用或函数时，由于权限不足而导致的错误。
 */
-enum class permission_error : int32_t {
+enum class permission_error : uint8_t {
     null_error = 0, // 无错误（No error）
     eperm, // 权限不足（Permission denied）
     eacces, // 权限被拒绝（Permission denied）
@@ -17,7 +17,7 @@ enum class permission_error : int32_t {
  * resources_error - 资源错误码（Resources Error Codes）
  * 这些错误码表示在系统调用或函数执行过程中，由于资源不足而导致的错误。
 */
-enum class resources_error : int32_t {
+enum class resources_error : uint8_t {
     null_error = 0, // 无错误（No error）
     enomem, // 内存不足，系统无法分配足够的内存
     enfile, // 系统中打开的文件太多，达到系统级限制
@@ -32,7 +32,7 @@ enum class resources_error : int32_t {
  * system_call_error - 系统调用错误码（System Call Error Codes）
  * 这些错误码表示在执行系统调用时可能出现的错误情况。
 */
-enum class system_call_error : int32_t {
+enum class system_call_error : uint8_t {
     null_error = 0, // 无错误（No error）
     eintr, // 系统调用被中断，系统调用执行过程中收到信号
     ebadf, // 错误的文件描述符，使用了无效的文件描述符
@@ -48,7 +48,7 @@ enum class system_call_error : int32_t {
  * equipment_error - 设备错误码（Equipment Error Codes）
  * 这些错误码表示在操作设备时可能出现的错误情况。
 */
-enum class equipment_error : int32_t {
+enum class equipment_error : uint8_t {
     null_error = 0, // 无错误（No error）
     eio, // I/O错误，硬件I/O操作失败
     enxio, // 没有这样的设备或地址，设备不存在或地址无效

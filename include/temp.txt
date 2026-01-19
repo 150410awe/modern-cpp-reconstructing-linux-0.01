@@ -1,0 +1,3 @@
+const.h
+我不知道为什么要放在const.h,最少是 Config.h吧
+#define BUFFER_END 0x200000

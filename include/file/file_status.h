@@ -28,34 +28,7 @@ struct file_status {
     ~file_status() {}
 };
 
-/**
- * file_permissions_type - 文件权限枚举（File Permissions Enumeration）
- * @note 表示文件的不同权限
-*/
-enum class file_permissions_type : uint16_t {
-    S_IRWXU = 00700,  // 用户读、写、执行权限
-    S_IRUSR = 00400,  // 用户读权限
-    S_IWUSR = 00200,  // 用户写权限  
-    S_IXUSR = 00100,  // 用户执行权限
 
-    S_IRWXG = 00070,  // 组读、写、执行权限
-    S_IRGRP = 00040,  // 组读权限
-    S_IWGRP = 00020,  // 组写权限
-    S_IXGRP = 00010,  // 组执行权限
-
-    S_IRWXO = 00007,  // 其他用户读、写、执行权限
-    S_IROTH = 00004,  // 其他用户读权限
-    S_IWOTH = 00002,  // 其他用户写权限
-    S_IXOTH = 00001,  // 其他用户执行权限
-};
-
-
-/**
- * chmod - 修改文件权限（Change File Permissions）
- * @param path 文件路径（Path to the file）
- * @param mode 新的权限模式（New permissions mode）
-*/
-void chmod(const char* path, mode_t mode);
 /**
  * fstat - 获取已打开文件状态（Get Status of an Open File）
  * @param fildes 文件描述符（File descriptor）
@@ -84,4 +57,4 @@ void get_file_status(const char* path, const file_status& stat_buf);
  * umask - 设置文件创建掩码（Set File Creation Mask）
  * @param mask 新的文件创建掩码（New file creation mask）
 */
-void umask(mode_t mask);
+//void umask(mode_t mask);

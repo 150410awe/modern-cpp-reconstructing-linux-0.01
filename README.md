@@ -8,33 +8,18 @@
 
 我可能也不创镜像，我只是非常想写代码
 
+## 设计哲学与特点
+
+- **清晰分离**
+- **类型安全**
+- **简单直接**
+- **模块化**
+
+对了,还有很慢(我说更新),对了,这是一个学习项目,学习.
+
 ## 项目结构
 
-```
-linux
-├── include/
-│   ├── error.h                  # 全局错误定义
-│   ├── type.h                   # 底层类型定义
-│   ├── executable_header.h      # 可执行文件头部定义
-│   ├── file/                    # 文件相关头文件
-│   │   ├── file_error.h         # 文件错误定义
-│   │   ├── file_status.h        # 文件状态结构体
-│   │   └── file_type.h          # 文件类型枚举
-│   ├── process/                 # 进程相关头文件
-│   │   ├── pricess_error.h      # 进程错误定义
-│   │   ├── process_status.h     # 进程状态
-│   │   ├── process_time.h       # 进程时间
-│   │   └── process_wait.h       # 进程等待
-│   └── system/                  # 系统相关头文件
-│       ├── system_error.h       # 系统错误
-│       └── system_name.h        # 系统名称
-├── linux.cpp                    # 主源文件
-├── linux.sln                    # VS解决方案文件
-├── linux.vcxproj                # VS项目文件
-├── linux.vcxproj.filters        # VS过滤器文件
-├── update_log.txt               # 更新日志
-└── README.md                    # 本文档
-```
+[项目文件结构.txt](项目文件结构.txt)
 
 ## 技术特点
 
@@ -79,6 +64,4 @@ linux
 ## 总结
 
 我觉得 namespace constexpr using inline & && 太伟大了，不然我就像老一辈程序员一样吃屎了
-这个项目不是一个完整的Linux系统，而是一个学习和实践现代C++的项目，通过重写Linux 0.01的核心功能，来理解操作系统的基本原理，同时体验现代C++的强大特性。
-如果你觉得这个项目有意思，欢迎fork和star！
-对了,上面是ai写的README.md
+这个项目不是一个完整的Linux系统，而是一个学习和实践现代C++的项目，通过重写Linux 0.01的核心功能，来理解操作系统的基本原理，同时体验现代C++的强大特性

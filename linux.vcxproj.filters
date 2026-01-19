@@ -4,9 +4,6 @@
     <Filter Include="include">
       <UniqueIdentifier>{2aaf5d16-17bd-42fa-a433-334a5967a483}</UniqueIdentifier>
     </Filter>
-    <Filter Include="include\sys">
-      <UniqueIdentifier>{260f26e6-0d81-44f8-b74e-90f5df781e2c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="include\file">
       <UniqueIdentifier>{d1a3e4b5-c2f6-87a9-40d8-e3c7b2f1a0d2}</UniqueIdentifier>
     </Filter>
@@ -21,23 +18,8 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="include\sys\type.h">
-      <Filter>include\sys</Filter>
-    </ClInclude>
-    <ClInclude Include="include\sys\stat.h">
-      <Filter>include\sys</Filter>
-    </ClInclude>
     <ClInclude Include="include\error.h">
       <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\sys\time.h">
-      <Filter>include\sys</Filter>
-    </ClInclude>
-    <ClInclude Include="include\sys\utsname.h">
-      <Filter>include\sys</Filter>
-    </ClInclude>
-    <ClInclude Include="include\sys\wait.h">
-      <Filter>include\sys</Filter>
     </ClInclude>
     <ClInclude Include="include\type.h">
       <Filter>include</Filter>
@@ -48,7 +30,19 @@
     <ClInclude Include="include\file\file_status.h">
       <Filter>include\file</Filter>
     </ClInclude>
-    <ClInclude Include="include\process\pricess_error.h">
+    <ClInclude Include="include\file\file_information_statistics.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file\file_kernel_type.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file\file_permissions_type.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file\file_user_type.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\process\process_error.h">
       <Filter>include\process</Filter>
     </ClInclude>
     <ClInclude Include="include\process\process_status.h">
@@ -65,6 +59,18 @@
     </ClInclude>
     <ClInclude Include="include\system\system_name.h">
       <Filter>include\system</Filter>
+    </ClInclude>
+    <ClInclude Include="include\symbol_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\executable_header.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\relocation_information.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\symbol_table.h">
+      <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

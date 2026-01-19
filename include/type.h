@@ -71,45 +71,6 @@ using off_t = int64_t;
 */
 using daddr_t = int64_t;
 
-/*
- * ustat - 存储文件系统的使用统计信息（File System Status）
- * @note 只是临时的类型定义
-*/
-struct ustat {
-    /*
-     * f_tfree - 表示文件系统的可用块数（Free Blocks）
-    */
-    daddr_t f_tfree;
-    /*
-     * f_tinode - 表示文件系统的可用inode数（Free Inodes）
-    */
-    ino_t f_tinode;
-
-    //10,下面是临时的硬编码，后续会根据配置文件修改
-
-    /*
-     * f_fname - 表示文件系统的名称（File System Name）
-    */
-    int8_t f_fname[6];
-    /*
-     * f_fpack - 表示文件系统的挂载点（Mount Point）
-    */
-    int8_t f_fpack[6];
-
-    /*
-     * ustat - 构造函数
-     * @param f_tfree 可用块数
-     * @param f_tinode 可用inode数
-    */
-    ustat(daddr_t f_tfree, ino_t f_tinode) : f_tfree(f_tfree), f_tinode(f_tinode), f_fname{ 0 }, f_fpack{ 0 } {}
-    ustat() : f_tfree(0), f_tinode(0), f_fname{ 0 }, f_fpack{ 0 } {}
-
-    /**
-     * ~ustat - 析构函数
-    */
-    ~ustat() {}
-};
-
 /**
  * int_div_t - 表示整数除法的结果（Integer Division Result）
  * @note 临时的定义

@@ -12,7 +12,7 @@
  * mathematical_calculation_error - 数学计算错误码（Mathematical Calculation Error Codes）
  * 这些错误码表示在进行数学计算时可能出现的错误情况。
 */
-enum class mathematical_calculation_error : int32_t {
+enum class mathematical_calculation_error : uint8_t {
     null_error = 0, // 无错误（No error）
     edom, // 域错误，数学计算超出了定义的域范围
     erange, // 范围错误，数学计算结果超出了表示范围
@@ -22,7 +22,7 @@ enum class mathematical_calculation_error : int32_t {
  * general_error - 通用错误码（General Error Codes）
  * 这些错误码表示在执行系统调用或函数时，未被分类的错误情况。
 */
-enum class general_error : int32_t {
+enum class general_error : uint8_t {
     null_error = 0, // 无错误（No error）
     error = 1, // 通用错误，未分类的错误
 };

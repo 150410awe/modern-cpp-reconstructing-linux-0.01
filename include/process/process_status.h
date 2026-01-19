@@ -7,7 +7,7 @@
 
 #include <cstdint>
 
-enum class process_status : int32_t {
+enum class process_status : uint8_t {
     null_status = 0,
     exited,  // 正常退出
     signaled,  // 信号终止
@@ -15,7 +15,7 @@ enum class process_status : int32_t {
     continued,  // 进程继续
 };
 
-enum class process_exit_code : int32_t {
+enum class process_exit_code : uint8_t {
     null_code = 0,
     success,     // 成功退出
     failed,      // 失败退出

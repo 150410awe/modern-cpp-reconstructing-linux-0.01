@@ -1,0 +1,17 @@
+linux
+├── include/
+│   ├── error.h                  # 全局错误定义
+│   ├── type.h                   # 底层类型定义
+|   |── executable_header.h      # 二进型文件定义
+│   ├── file/                    # 文件相关头文件
+│   │   ├── file_error.h         # 文件错误定义
+│   │   └── file_status.h        # 文件状态结构体
+│   ├── process/                 # 进程相关头文件
+│   │   ├── pricess_error.h      # 进程错误定义
+│   │   ├── process_status.h     # 进程状态
+│   │   ├── process_time.h       # 进程时间
+│   │   └── process_wait.h       # 进程等待
+│   └── system/                  # 系统相关头文件
+│       ├── system_error.h       # 系统错误
+│       └── system_name.h        # 系统名称
+└── linux.cpp                    # 主源文件
