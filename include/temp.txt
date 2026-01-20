@@ -1,3 +1,14 @@
 const.h
 我不知道为什么要放在const.h,最少是 Config.h吧
 #define BUFFER_END 0x200000
+
+file_lock.h
+struct file_lock {
+    file_locking_type type; // 文件锁类型
+    uint16_t whence; // 锁的起始位置 
+    off_t start; // 锁的起始偏移量
+    off_t len; // 锁的长度
+    pid_t pid; // 加锁进程的PID
+};
+
+whence 类型未实现

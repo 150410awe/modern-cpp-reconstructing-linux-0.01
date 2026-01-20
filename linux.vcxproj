@@ -19,14 +19,19 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\character_type.h" />
     <ClInclude Include="include\error.h" />
     <ClInclude Include="include\executable_header.h" />
+    <ClInclude Include="include\file\file_control.h" />
     <ClInclude Include="include\file\file_information_statistics.h" />
     <ClInclude Include="include\file\file_kernel_type.h" />
+    <ClInclude Include="include\file\file_lock.h" />
+    <ClInclude Include="include\file\file_operations.h" />
     <ClInclude Include="include\file\file_permissions_type.h" />
     <ClInclude Include="include\file\file_user_type.h" />
     <ClInclude Include="include\process\process_error.h" />
     <ClInclude Include="include\relocation_information.h" />
+    <ClInclude Include="include\string_view.h" />
     <ClInclude Include="include\symbol_table.h" />
     <ClInclude Include="include\symbol_type.h" />
     <ClInclude Include="include\type.h" />
@@ -147,6 +152,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

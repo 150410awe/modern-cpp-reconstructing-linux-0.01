@@ -9,13 +9,13 @@
 
 /*
  * file_Information_statistics - 存储文件系统的使用统计信息（File System Status）
- * @note 只是临时的类型定义
+ * @note 只是临时的类型定义，后续会根据实际情况进行修改
 */
 struct file_Information_statistics {
     daddr_t num_available_file_blocks;  // 表示文件系统的可用块数
     ino_t file_available_inode_num;  // 表示文件系统的可用inode数
-    int8_t file_system_name[6];  // 文件系统名称
-    int8_t file_system_mount_point[6];  // 文件系统挂载点
+    char file_system_name[6];  // 文件系统名称
+    char file_system_mount_point[6];  // 文件系统挂载点
 
 
     file_Information_statistics() : num_available_file_blocks(0), file_available_inode_num(0), file_system_name { 0 }, file_system_mount_point { 0 } {}

@@ -2,12 +2,13 @@
 
 
 #include "../type.h"
+#include <string_view>
 
 /**
  * file_user_permissions_type - 文件权限枚举（File Permissions Enumeration）
  * @note 表示文件的不同权限,我为什么要符合Unix标准???我想怎么地怎么地,别错就okk了
 */
-enum file_permissions_type : uint16_t {
+enum class file_permissions_type : uint16_t {
     none = 0,
     read = 1 << 8,  // 用户读权限
     write = 1 << 7,  // 用户写权限  
@@ -30,10 +31,28 @@ enum file_permissions_type : uint16_t {
     all_permissions = read_write_execute | group_read_write_execute | other_read_write_execute,  // 所有权限
 };
 
+/**
+ * operator| - 位或运算符（Bitwise OR Operator）
+ * @param a 第一个权限类型（First permissions type）
+ * @param b 第二个权限类型（Second permissions type）
+ * @return 合并后的权限类型（Combined permissions type）
+*/
+constexpr file_permissions_type operator|(file_permissions_type a, file_permissions_type b) {
+    return static_cast<file_permissions_type>(static_cast<uint16_t>(a) | static_cast<uint16_t>(b));
+}
+/**
+ * operator& - 位与运算符（Bitwise AND Operator）
+ * @param a 第一个权限类型（First permissions type）
+ * @param b 第二个权限类型（Second permissions type）
+ * @return 合并后的权限类型（Combined permissions type）
+*/
+constexpr file_permissions_type operator&(file_permissions_type a, file_permissions_type b) {
+    return static_cast<file_permissions_type>(static_cast<uint16_t>(a) & static_cast<uint16_t>(b));
+}
 
 /**
  * chmod - 修改文件权限（Change File Permissions）
  * @param path 文件路径（Path to the file）
  * @param mode 新的权限模式（New permissions mode）
 */
-void chmod(const char* path, mode_t mode);
+void chmod(std::string_view path, mode_t mode);

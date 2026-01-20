@@ -72,10 +72,28 @@
     <ClInclude Include="include\symbol_table.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\file\file_control.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file\file_lock.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file\file_operations.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\character_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\string_view.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="linux.cpp">
       <Filter>main</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="include\temp.txt" />
   </ItemGroup>
 </Project>

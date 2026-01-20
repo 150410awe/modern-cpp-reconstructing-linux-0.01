@@ -19,7 +19,7 @@ struct symbol_table {
      * 用于存储符号名称或相关信息
      */
     union {
-        int8_t* symbol_name;        // 直接符号名称指针
+        char* symbol_name;        // 直接符号名称指针
         symbol_table* symbol_next;  // 符号链表中的下一个条目
         int64_t string_table_index; // 字符串表中的索引
     } symbol_un;

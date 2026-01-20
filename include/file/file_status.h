@@ -6,6 +6,7 @@
 */
 
 #include "../type.h"
+#include <string_view>
 
 /**
  * file_status - 文件状态结构体（File Status Structure）
@@ -34,25 +35,25 @@ struct file_status {
  * @param fildes 文件描述符（File descriptor）
  * @param stat_buf 存储文件状态的结构体引用（Reference to file_status structure to store file status）
 */
-void fstat(int fildes, const file_status& stat_buf);
+void fstat(int32_t fildes, const file_status& stat_buf);
 /**
  * mkdir - 创建目录（Create a Directory）
  * @param path 目录路径（Path to the directory）
  * @param mode 目录权限模式（Permissions mode for the directory）
 */
-void mkdir(const char* path, mode_t mode);
+void mkdir(std::string_view path, mode_t mode);
 /**
  * mkfifo - 创建FIFO文件（Create a FIFO File）
  * @param path FIFO文件路径（Path to the FIFO file）
  * @param mode FIFO文件权限模式（Permissions mode for the FIFO file）
 */
-void mkfifo(const char* path, mode_t mode);
+void mkfifo(std::string_view path, mode_t mode);
 /**
  * get_file_status - 获取文件状态（Get File Status）
  * @param path 文件路径（Path to the file）
  * @param stat_buf 存储文件状态的结构体引用（Reference to file_status structure to store file status）
 */
-void get_file_status(const char* path, const file_status& stat_buf);
+void get_file_status(std::string_view path, const file_status& stat_buf);
 /**
  * umask - 设置文件创建掩码（Set File Creation Mask）
  * @param mask 新的文件创建掩码（New file creation mask）
