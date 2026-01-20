@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# 获取当前文件所在路径的绝对路径
+# get the absolute path of the current script
 get_cur_abs_path()
 {
 	local old_path=$(pwd)
@@ -9,7 +9,7 @@ get_cur_abs_path()
 	cd $old_path
 }
 
-# 全局变量，表示当前脚本所在绝对路径
+# global variable, represents the absolute path of the current script
 cur_abs_path=$(get_cur_abs_path)
 
 cmake -S ${cur_abs_path} \
