@@ -84,9 +84,6 @@
     <ClInclude Include="include\character_type.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\string_view.h">
-      <Filter>include</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="linux.cpp">

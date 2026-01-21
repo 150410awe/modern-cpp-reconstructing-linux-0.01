@@ -31,7 +31,6 @@
     <ClInclude Include="include\file\file_user_type.h" />
     <ClInclude Include="include\process\process_error.h" />
     <ClInclude Include="include\relocation_information.h" />
-    <ClInclude Include="include\string_view.h" />
     <ClInclude Include="include\symbol_table.h" />
     <ClInclude Include="include\symbol_type.h" />
     <ClInclude Include="include\type.h" />
