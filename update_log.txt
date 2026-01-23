@@ -1,3 +1,9 @@
+2026.1.23.21.05
+重构 stdarg.h. 为 variadic.h 没有什么好说的....emmmmm, ye..emm
+对了,还有一点,variadic.h第一次用模板元.你是不是感觉太慢了,现在才用到.哎～
+说实话,要不是因为auto看不出类型我才不用.只有合适的时侯才用
+不可以为了用模板而用模板.
+-- 0.00.05 重构stdarg.h. 为 variadic.h
 2026.1.21.12.38
 重构 signal.h 两个文件 signal_processing.h signal_type.h 没有什么好说的
 0.0.0.04 重构 signal.h

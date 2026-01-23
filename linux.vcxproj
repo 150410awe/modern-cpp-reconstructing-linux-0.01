@@ -31,6 +31,8 @@
     <ClInclude Include="include\file\file_user_type.h" />
     <ClInclude Include="include\process\process_error.h" />
     <ClInclude Include="include\relocation_information.h" />
+    <ClInclude Include="include\signal_processing.h" />
+    <ClInclude Include="include\signal_type.h" />
     <ClInclude Include="include\symbol_table.h" />
     <ClInclude Include="include\symbol_type.h" />
     <ClInclude Include="include\type.h" />
@@ -153,6 +155,10 @@
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
       <LanguageStandard_C>stdclatest</LanguageStandard_C>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <ExceptionHandling>false</ExceptionHandling>
+      <EnableParallelCodeGeneration>true</EnableParallelCodeGeneration>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
