@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -20,6 +20,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\character_type.h" />
+    <ClInclude Include="include\control_char_type.h" />
     <ClInclude Include="include\error.h" />
     <ClInclude Include="include\executable_header.h" />
     <ClInclude Include="include\file\file_control.h" />
@@ -29,12 +30,17 @@
     <ClInclude Include="include\file\file_operations.h" />
     <ClInclude Include="include\file\file_permissions_type.h" />
     <ClInclude Include="include\file\file_user_type.h" />
+    <ClInclude Include="include\ioctl_command.h" />
+    <ClInclude Include="include\lmn_enum_struct_bit_mask.h" />
     <ClInclude Include="include\process\process_error.h" />
     <ClInclude Include="include\relocation_information.h" />
     <ClInclude Include="include\signal_processing.h" />
     <ClInclude Include="include\signal_type.h" />
+    <ClInclude Include="include\string.h" />
     <ClInclude Include="include\symbol_table.h" />
     <ClInclude Include="include\symbol_type.h" />
+    <ClInclude Include="include\terminal_control.h" />
+    <ClInclude Include="include\terminal_mode_flag.h" />
     <ClInclude Include="include\type.h" />
     <ClInclude Include="include\file\file_error.h" />
     <ClInclude Include="include\file\file_status.h" />
@@ -43,6 +49,8 @@
     <ClInclude Include="include\process\process_wait.h" />
     <ClInclude Include="include\system\system_error.h" />
     <ClInclude Include="include\system\system_name.h" />
+    <ClInclude Include="include\variadic.h" />
+    <ClInclude Include="include\window.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="linux.cpp" />
@@ -139,6 +147,8 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdclatest</LanguageStandard_C>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

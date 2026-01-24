@@ -14,7 +14,7 @@ struct variadic {
     ~variadic() {}   //va_end(AP)
 };
 
-namespace variadic_parameter_ {
+namespace variadic_parameter {
     /**
      * calculate_alignment_space - 计算类型的对齐空间（Alignment Space）
      * @tparam type_t 类型参数（Type Parameter）

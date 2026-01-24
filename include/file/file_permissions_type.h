@@ -31,28 +31,16 @@ enum class file_permissions_type : uint16_t {
     all_permissions = read_write_execute | group_read_write_execute | other_read_write_execute,  // 所有权限
 };
 
-/**
- * operator| - 位或运算符（Bitwise OR Operator）
- * @param a 第一个权限类型（First permissions type）
- * @param b 第二个权限类型（Second permissions type）
- * @return 合并后的权限类型（Combined permissions type）
-*/
-constexpr file_permissions_type operator|(file_permissions_type a, file_permissions_type b) {
-    return static_cast<file_permissions_type>(static_cast<uint16_t>(a) | static_cast<uint16_t>(b));
-}
-/**
- * operator& - 位与运算符（Bitwise AND Operator）
- * @param a 第一个权限类型（First permissions type）
- * @param b 第二个权限类型（Second permissions type）
- * @return 合并后的权限类型（Combined permissions type）
-*/
-constexpr file_permissions_type operator&(file_permissions_type a, file_permissions_type b) {
-    return static_cast<file_permissions_type>(static_cast<uint16_t>(a) & static_cast<uint16_t>(b));
-}
+
+#include "../lmn_enum_struct_bit_mask.h"
+
+struct file_permissions_enum_struct : lmn_enum_struct_prototype<file_permissions_enum_struct, file_permissions_type> {
+    using lmn_enum_struct_prototype<file_permissions_enum_struct, file_permissions_type>::lmn_enum_struct_prototype;
+};
 
 /**
  * chmod - 修改文件权限（Change File Permissions）
  * @param path 文件路径（Path to the file）
  * @param mode 新的权限模式（New permissions mode）
 */
-void chmod(std::string_view path, mode_t mode);
+void chmod(std::string_view path, file_permissions_enum_struct mode);

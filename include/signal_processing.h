@@ -20,9 +20,9 @@
 struct signal_processing {
     signal_handler_t signal_handler; // 信号处理函数指针（Signal Handler Function Pointer）
     signal_mask_t signal_mask; // 信号掩码（Signal Mask）
-    sa_flag signal_flags; // 信号处理标志（Signal Processing Flags）
+    sa_flag_enum_struct signal_flags; // 信号处理标志（Signal Processing Flags）
 
-    signal_processing() : signal_handler(SIG_DFL), signal_mask(0), signal_flags(sa_flag::null_flag) {}
+    signal_processing() : signal_handler(SIG_DFL), signal_mask(0), signal_flags() {}
     ~signal_processing() = default;
 };
 

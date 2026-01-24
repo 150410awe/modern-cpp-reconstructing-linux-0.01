@@ -32,20 +32,21 @@ enum class open_mode : uint16_t {
  */
 enum class file_control : uint8_t {
     F_DUPFD = 0, // 复制文件描述符
-    F_GETFD = 1, // 获取文件描述符标志
-    F_SETFD = 2, // 设置文件描述符标志
-    F_GETFL = 3, // 获取文件状态标志
-    F_SETFL = 4, // 设置文件状态标志
-    F_GETLK = 5, // 获取文件锁信息（未实现）
-    F_SETLK = 6, // 设置文件锁
-    F_SETLKW = 7, // 设置文件锁（等待模式）
+    F_GETFD, // 获取文件描述符标志
+    F_SETFD, // 设置文件描述符标志
+    F_GETFL, // 获取文件状态标志
+    F_SETFL, // 设置文件状态标志
+    F_GETLK, // 获取文件锁信息（未实现）
+    F_SETLK, // 设置文件锁
+    F_SETLKW, // 设置文件锁（等待模式）
+    null_, // 空操作（未使用）
 };
 
 /**
  * File_descriptor_flag - 文件描述符标志枚举类
  * @note 包含文件描述符标志相关的定义和函数声明
  */
-enum class File_descriptor_flag : uint8_t {
+enum class file_descriptor_flag : uint8_t {
     FD_CLOEXEC = 0x01, // 关闭执行时关闭文件描述符
 };
 
@@ -55,22 +56,13 @@ enum class File_descriptor_flag : uint8_t {
  */
 enum class file_lock_type : uint8_t {
     F_RDLCK = 0, // 读取锁
-    F_WRLCK = 1, // 写入锁
-    F_UNLCK = 2, // 解锁
+    F_WRLCK, // 写入锁
+    F_UNLCK, // 解锁
+    null_, // 空操作（未使用）
 };
 
+#include "../lmn_enum_struct_bit_mask.h"
 
-constexpr open_mode operator|(open_mode a, open_mode b) {
-    return static_cast<open_mode>(static_cast<uint16_t>(a) | static_cast<uint16_t>(b));
-}
-constexpr open_mode operator&(open_mode a, open_mode b) {
-    return static_cast<open_mode>(static_cast<uint16_t>(a) & static_cast<uint16_t>(b));
-}
-constexpr open_mode operator|=(open_mode& a, open_mode b) {
-    a = a | b;
-    return a;
-}
-constexpr open_mode operator&=(open_mode& a, open_mode b) {
-    a = a & b;
-    return a;
-}
+struct open_mode_enum_struct : lmn_enum_struct_prototype<open_mode_enum_struct, open_mode> {
+    using lmn_enum_struct_prototype::lmn_enum_struct_prototype;
+};

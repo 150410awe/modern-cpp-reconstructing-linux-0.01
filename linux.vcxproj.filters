@@ -36,9 +36,6 @@
     <ClInclude Include="include\file\file_kernel_type.h">
       <Filter>include\file</Filter>
     </ClInclude>
-    <ClInclude Include="include\file\file_permissions_type.h">
-      <Filter>include\file</Filter>
-    </ClInclude>
     <ClInclude Include="include\file\file_user_type.h">
       <Filter>include\file</Filter>
     </ClInclude>
@@ -72,9 +69,6 @@
     <ClInclude Include="include\symbol_table.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\file\file_control.h">
-      <Filter>include\file</Filter>
-    </ClInclude>
     <ClInclude Include="include\file\file_lock.h">
       <Filter>include\file</Filter>
     </ClInclude>
@@ -90,6 +84,36 @@
     <ClInclude Include="include\signal_type.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\variadic.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\string.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\control_char_type.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ioctl_command.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\terminal_mode_flag.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\lmn_enum_struct_bit_mask.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\terminal_control.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\window.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file\file_permissions_type.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file\file_control.h">
+      <Filter>include\file</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="linux.cpp">
@@ -97,6 +121,8 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="include\temp.txt" />
+    <Text Include="include\temp.txt">
+      <Filter>include</Filter>
+    </Text>
   </ItemGroup>
 </Project>

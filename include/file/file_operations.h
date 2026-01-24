@@ -15,7 +15,7 @@ namespace file_operations {
      * @param mode 文件模式（File Mode）文件的权限和属性
      * @return 文件描述符（File Descriptor）
     */
-    inline int32_t creat(std::string_view filename, open_mode mode);
+    inline int32_t creat(std::string_view filename, open_mode_enum_struct mode);
     /**
      * fcntl - 文件控制（File Control）
      * @param fildes 文件描述符（File Descriptor）
@@ -29,5 +29,5 @@ namespace file_operations {
      * @param flags 打开标志（Open Flags）文件的打开方式和创建模式
      * @return 文件描述符（File Descriptor）
     */
-    inline int32_t open(std::string_view filename, open_mode flags/*, ...*/);
+    inline int32_t open(std::string_view filename, open_mode_enum_struct flags/*, ...*/);
 }

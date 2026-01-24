@@ -70,6 +70,20 @@ using off_t = int64_t;
  * daddr_t - 磁盘块地址类型
 */
 using daddr_t = int64_t;
+/*
+ * ptrdiff_t - 指针差值类型
+*/
+using ptrdiff_t = int64_t;
+/**
+ * structure_offsetof - 计算结构体成员的偏移量
+ * @param u 指向结构体成员的指针
+ * @return 结构体成员的偏移量
+ * @note 他太丑了,我也没什么好法子
+*/
+template<typename T, typename U>
+constexpr offset_t structure_offsetof(U T::* u) {
+  return reinterpret_cast<offset_t>(&(reinterpret_cast<T*>(nullptr)->*u));
+}
 
 /**
  * int_div_t - 表示整数除法的结果（Integer Division Result）

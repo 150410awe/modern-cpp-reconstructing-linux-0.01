@@ -40,8 +40,10 @@ enum class signal_number : uint16_t {
     SIGTTOU, // 后台进程写终端
 };
 
-
-// 信号掩码操作类型
+/**
+ * sigprocmask_operation - 信号掩码操作类型（Signal Mask Operation Type）
+ * @note 包含阻塞、解除阻塞、设置信号掩码等操作
+*/
 enum class sigprocmask_operation : int32_t {
     BLOCK = 0,  // 阻塞信号
     UNBLOCK,    // 解除阻塞信号
@@ -49,38 +51,21 @@ enum class sigprocmask_operation : int32_t {
     null_operation,
 };
 
-
-// 信号处理标志（位掩码形式）
+/**
+ * sa_flag - 信号处理标志（Signal Handler Flags）
+ * @note 包含信号处理的各种标志位,Linux 0.01 版本 尚未完全实现 sigaction 功能，只是在头文件中保持了 POSIX 兼容性
+ * 在后续的 Linux 版本中， sa_flags 会增加更多标志，如 SA_RESTART 、 SA_SIGINFO 等，但在 Linux 0.01 中这些都尚未实现...
+*/
 enum class sa_flag : int32_t {
     null_flag = 0,
     NOCLDSTOP,  // 子进程停止时不产生 SIGCHLD
     // 可以添加其他标志...
 };
 
-
-inline sa_flag operator|(sa_flag a, sa_flag b) {
-    return static_cast<sa_flag>(static_cast<int32_t>(a) | static_cast<int32_t>(b));
-}
-
-inline sa_flag operator&(sa_flag a, sa_flag b) {
-    return static_cast<sa_flag>(static_cast<int32_t>(a) & static_cast<int32_t>(b));
-}
-
-inline sa_flag operator~(sa_flag a) {
-    return static_cast<sa_flag>(~static_cast<int32_t>(a));
-}
-
-inline sa_flag& operator|=(sa_flag& a, sa_flag b) {
-    a = a | b;
-    return a;
-}
-
-inline sa_flag& operator&=(sa_flag& a, sa_flag b) {
-    a = a & b;
-    return a;
-}
-
-
+#include "lmn_enum_struct_bit_mask.h"
+struct sa_flag_enum_struct : lmn_enum_struct_prototype<sa_flag_enum_struct, sa_flag> {
+    using lmn_enum_struct_prototype::lmn_enum_struct_prototype;
+};
 
 
 // 信号处理函数指针类型（Signal Handler Function Pointer Type）
