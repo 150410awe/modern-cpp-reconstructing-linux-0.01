@@ -39,6 +39,8 @@
 [include/symbol_table.h](include/symbol_table.h) - 符号表管理
 - **文件类型**：[include/file/file_kernel_type.h](include/file/file_kernel_type.h) - 内核文件类型管理
 [include/file/file_user_type.h](include/file/file_user_type.h) - 用户文件类型管理
+- **lmn_enum_struct_bit_mask**：[include/lmn_enum_struct_bit_mask.h](include/lmn_enum_struct_bit_mask.h) - 枚举结构体位掩码管理
+- **终端模式**：[include/terminal_mode_flag.h](include/terminal_mode_flag.h) - 终端模式管理
 
 ## 未来计划
 
