@@ -22,7 +22,7 @@ namespace file_operations {
      * @param cmd 命令（Command）文件描述符的各种属性
      * @return 结果（Result）
     */
-    inline int32_t fcntl(int32_t fildes, file_control cmd/*, ...*/);
+    inline int32_t fcntl(open_mode_enum_struct fildes, file_control cmd/*, ...*/);
     /**
      * open - 打开文件（Open File）
      * @param filename 文件名（Filename）

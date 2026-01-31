@@ -408,8 +408,8 @@ namespace string_processing {
      *       - 大于 0：cs 大于 ct
     */
     inline int32_t memcmp(const void* cs, const void* ct, int32_t count) {
-        const unsigned char* c1 = static_cast<const unsigned char*>(cs);
-        const unsigned char* c2 = static_cast<const unsigned char*>(ct);
+        const u_char* c1 = static_cast<const u_char*>(cs);
+        const u_char* c2 = static_cast<const u_char*>(ct);
 
         for (int32_t i = 0; i < count; i++)
             if (c1[i] != c2[i])
@@ -427,8 +427,8 @@ namespace string_processing {
      * @note 在 cs 指向的内存块中查找字符 c，返回其指针
     */
     inline void* memchr(const void* cs, char c, int32_t count) {
-        const unsigned char* p = static_cast<const unsigned char*>(cs);
-        unsigned char uc = static_cast<unsigned char>(c);
+        const u_char* p = static_cast<const u_char*>(cs);
+        u_char uc = static_cast<u_char>(c);
 
         for (int32_t i = 0; i < count; i++)
             if (p[i] == uc)
@@ -446,8 +446,8 @@ namespace string_processing {
      * @note 将 s 指向的内存块中的 count 个字节设置为字符 c
     */
     inline void* memset(void* s, char c, int32_t count) {
-        unsigned char* p = static_cast<unsigned char*>(s);
-        unsigned char uc = static_cast<unsigned char>(c);
+        u_char* p = static_cast<u_char*>(s);
+        u_char uc = static_cast<u_char>(c);
 
         for (int32_t i = 0; i < count; i++)
             p[i] = uc;

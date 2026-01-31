@@ -72,7 +72,6 @@ enum class output_mode_flag : uint16_t {
  * @note 定义终端控制结构体中的控制模式标志位
  */
 enum class control_mode_flag : uint32_t {
-    CBAUD = 0000017, //波特率掩码
     CSIZE = 0000060, //字符大小掩码
     //5-8 位字符大小
     CS5 = 0000000,
@@ -148,7 +147,7 @@ enum class local_mode_flag : uint16_t {
  * @brief 控制流设置（Control Flow Setting）
  * @note 定义终端控制结构体中的控制流设置
  */
-enum class Terminal_control_flow : uint8_t {
+enum class terminal_control_flow : uint8_t {
     null_ = 0, // 无控制流 - 不启用任何控制流功能
     TCOOFF, // 停止输出 - 挂起终端输出，直到后续的 TCOON 命令
     TCOON, // 恢复输出 - 恢复被 TCOOFF 挂起的终端输出
@@ -214,4 +213,11 @@ struct local_mode_flag_enum_struct : lmn_enum_struct_prototype<local_mode_flag_e
  */
 enum class operating_procedures : uint8_t {
     default_ = 0, // 默认终端行规程
+};
+
+enum class terminal_error {
+    SUCCESS,    // 成功
+    INVALID_FD, // 无效文件描述符
+    INVALID_PARAMETER,  // 无效参数
+    IO_ERROR,    // 输入输出错误
 };

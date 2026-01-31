@@ -14,7 +14,7 @@
 constexpr uint16_t TTY_BUF_SIZE = 1024;
 
 /**
- * ioctl_command_cardinal_number - 魔法数（Magic Number）0x6C6D6E -
+ * ioctl_command_cardinal_number - 基数（Cardinal Number）0x6C6D6E - lmn
  * 设计目的: 使终端ioctl命令在系统中保持唯一性，避免与其他设备的ioctl命令冲突
  */
 constexpr uint32_t ioctl_command_cardinal_number = 0x6C6D6E;
@@ -22,7 +22,7 @@ constexpr uint32_t ioctl_command_cardinal_number = 0x6C6D6E;
 /**
  * ioctl_command - IOCTL 命令（IO Control Command）
  * @note 定义终端控制结构体中的 IOCTL 命令
- * 每个ioctl命令 = 魔术数字 + 序号，格式为 0x6C6D6E
+ * 每个ioctl命令 = 基数 + 序号，格式为 0x6C6D6E
  */
 enum class ioctl_command : uint32_t {
     TCGETS, // 获取终端状态 - 读取终端的termios结构体

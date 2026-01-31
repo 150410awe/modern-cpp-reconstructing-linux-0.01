@@ -8,7 +8,11 @@
  */
 
 #include <cstdint>
-
+/**
+ * u_char - 无符号字符类型
+ * 用于表示无符号的字符
+ */
+using u_char = uint8_t;
  /**
   * size_t - 无符号整数类型
   * 用于表示对象的大小或数组的索引
@@ -18,6 +22,10 @@ using size_t = uint64_t;
  * time_t - 时间类型
 */
 using time_t = uint64_t;
+/**
+ * clock_t - 时钟滴答类型，用于计算程序运行时间
+*/
+using clock_t = uint64_t;
 /*
  * offset_t - 偏移量类型
 */

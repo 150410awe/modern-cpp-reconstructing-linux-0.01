@@ -7,6 +7,8 @@
 
 #include "../type.h"
 #include <string_view>
+#include "file_control.h"
+#include "file_permissions_type.h"
 
 /**
  * file_status - 文件状态结构体（File Status Structure）
@@ -31,11 +33,17 @@ struct file_status {
 
 
 /**
+ * chmod - 修改文件权限（Change File Permissions）
+ * @param path 文件路径（Path to the file）
+ * @param mode 新的权限模式（New permissions mode）
+*/
+void chmod(std::string_view path, file_permissions_enum_struct mode);
+/**
  * fstat - 获取已打开文件状态（Get Status of an Open File）
  * @param fildes 文件描述符（File descriptor）
  * @param stat_buf 存储文件状态的结构体引用（Reference to file_status structure to store file status）
 */
-void fstat(int32_t fildes, const file_status& stat_buf);
+void fstat(open_mode_enum_struct fildes, const file_status& stat_buf);
 /**
  * mkdir - 创建目录（Create a Directory）
  * @param path 目录路径（Path to the directory）

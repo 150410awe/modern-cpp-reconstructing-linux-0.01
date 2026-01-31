@@ -6,19 +6,22 @@
  */
 
 
-#include <cstdint>
+#include "../type.h"
 
 /**
  * open_mode - 文件打开模式枚举类
  * @note 包含文件打开模式相关的定义和函数声明
  */
 enum class open_mode : uint16_t {
+    //访问模式 （互斥，必选其一）
     O_ACCMODE = 00003, // 访问模式掩码，用于提取文件打开模式
     O_RDONLY = 00, // 只读模式
     O_WRONLY = 01, // 只写模式
     O_RDWR = 02, // 读写模式
+    //创建/截断 可选
     O_CREAT = 00100, // 创建文件（不存在时） not fcntl
     O_EXCL = 00200, // 与 O_CREAT 一起使用，确保创建新文件 not fcntl
+    //状态控制 可选
     O_NOCTTY = 00400, // 不将文件作为控制终端 not fcntl
     O_TRUNC = 01000, // 截断文件为0长度 not fcntl
     O_APPEND = 02000, // 追加模式，写入时从文件末尾开始
@@ -62,7 +65,9 @@ enum class file_lock_type : uint8_t {
 };
 
 #include "../lmn_enum_struct_bit_mask.h"
+#include "file_permissions_type.h"
 
-struct open_mode_enum_struct : lmn_enum_struct_prototype<open_mode_enum_struct, open_mode> {
+struct open_mode_enum_struct : lmn_enum_struct_prototype<open_mode_enum_struct, open_mode>{
     using lmn_enum_struct_prototype::lmn_enum_struct_prototype;
+    file_permissions_enum_struct permissions;
 };

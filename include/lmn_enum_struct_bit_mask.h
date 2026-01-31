@@ -14,16 +14,15 @@ template <typename struct_t, typename enum_t>
 struct lmn_enum_struct_prototype {
     lmn_enum_struct_prototype(int64_t data) : data { data } {}
     lmn_enum_struct_prototype() : data { 0 } {}
-
     constexpr struct_t operator|= (enum_t a) { return this->data |= static_cast<int64_t>(a); }
-    constexpr struct_t operator|(enum_t a) { return this->data | static_cast<int64_t>(a); }
+    constexpr struct_t operator|(enum_t a) const { return struct_t { this->data | static_cast<int64_t>(a) }; }
     constexpr struct_t operator&= (enum_t a) { return this->data &= static_cast<int64_t>(a); }
-    constexpr struct_t operator&(enum_t a) { return this->data & static_cast<int64_t>(a); }
-    constexpr struct_t operator^(enum_t a) { return this->data ^ static_cast<int64_t>(a); }
-    constexpr struct_t operator~(void) { return ~this->data; }
+    constexpr struct_t operator&(enum_t a) const { return struct_t { this->data & static_cast<int64_t>(a) }; }
+    constexpr struct_t operator^(enum_t a) const { return struct_t { this->data ^ static_cast<int64_t>(a) }; }
+    constexpr struct_t operator~(void) const { return struct_t { ~this->data }; }
     constexpr struct_t operator=(enum_t a) { return this->data = static_cast<int64_t>(a); }
-    constexpr bool operator!(void) { return this->data == 0; }
-    constexpr bool operator==(lmn_enum_struct_prototype a) { return this->data == a.data; }
-    constexpr bool operator!=(lmn_enum_struct_prototype a) { return !(*this == a); }
+    constexpr bool operator!(void) const { return this->data == 0; }
+    constexpr bool operator==(lmn_enum_struct_prototype a) const { return this->data == a.data; }
+    constexpr bool operator!=(lmn_enum_struct_prototype a) const { return !(*this == a); }
     int64_t data;
 };
